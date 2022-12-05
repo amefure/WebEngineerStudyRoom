@@ -16,6 +16,7 @@
 		12292DA2291DA5B9000339B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12292DA1291DA5B9000339B1 /* Preview Assets.xcassets */; };
 		12292DAA291DA6B9000339B1 /* AdMobViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12292DA9291DA6B9000339B1 /* AdMobViewModels.swift */; };
 		12292DAC291DAB4A000339B1 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12292DAB291DAB4A000339B1 /* APIController.swift */; };
+		12579ED9293E1E1A00109E45 /* FileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12579ED8293E1E1A00109E45 /* FileController.swift */; };
 		635EC9C329E875C51645A362 /* Pods_WebEngineerStudyRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9FBAD9F90170DE4796A370 /* Pods_WebEngineerStudyRoom.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		12292DA8291DA65E000339B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		12292DA9291DA6B9000339B1 /* AdMobViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobViewModels.swift; sourceTree = "<group>"; };
 		12292DAB291DAB4A000339B1 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		12579ED8293E1E1A00109E45 /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileController.swift; sourceTree = "<group>"; };
 		71183EE680D46FA87C8B2159 /* Pods-WebEngineerStudyRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebEngineerStudyRoom.debug.xcconfig"; path = "Target Support Files/Pods-WebEngineerStudyRoom/Pods-WebEngineerStudyRoom.debug.xcconfig"; sourceTree = "<group>"; };
 		F8858D38B5A4E822078F4FE8 /* Pods-WebEngineerStudyRoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebEngineerStudyRoom.release.xcconfig"; path = "Target Support Files/Pods-WebEngineerStudyRoom/Pods-WebEngineerStudyRoom.release.xcconfig"; sourceTree = "<group>"; };
 		FF9FBAD9F90170DE4796A370 /* Pods_WebEngineerStudyRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebEngineerStudyRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				12292DAB291DAB4A000339B1 /* APIController.swift */,
+				12579ED8293E1E1A00109E45 /* FileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				12292DAC291DAB4A000339B1 /* APIController.swift in Sources */,
 				12292D9D291DA5B8000339B1 /* ListArticleView.swift in Sources */,
 				121EADB4291E786000C4E6D5 /* RowArticleView.swift in Sources */,
+				12579ED9293E1E1A00109E45 /* FileController.swift in Sources */,
 				12292D9B291DA5B8000339B1 /* WebEngineerStudyRoomApp.swift in Sources */,
 				12292DAA291DA6B9000339B1 /* AdMobViewModels.swift in Sources */,
 				121EADB2291E691500C4E6D5 /* Article.swift in Sources */,
@@ -372,12 +376,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"WebEngineerStudyRoom/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebEngineerStudyRoom/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Webエンジニア学習部屋";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -403,12 +409,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"WebEngineerStudyRoom/Preview Content\"";
 				DEVELOPMENT_TEAM = CGD79LB65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WebEngineerStudyRoom/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Webエンジニア学習部屋";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

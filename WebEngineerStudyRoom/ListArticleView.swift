@@ -10,6 +10,7 @@ import SwiftUI
 struct ListArticleView: View {
     
     let api = APIController()
+    let fileController = FileController()
     
     @State var articles:[Article] = []
     @State var text:String = ""
@@ -62,10 +63,10 @@ struct ListArticleView: View {
                 Spacer()
                 
             }
-//            AdMobBannerView().frame(height: 60)
+            AdMobBannerView().frame(height: 60)
             
         }
-        .preferredColorScheme(.dark)
+        
         .onAppear{
             api.getArticleAPI { array in
                 for article in array {
@@ -80,7 +81,14 @@ struct ListArticleView: View {
                     //dic!["entryDate"] as! String
                     articles.append(obj)
                 }
+                if articles.count == 0{
+                    articles = fileController.loadJson()
+                }else{
+                    fileController.saveJson(articles)
+                }
+                
             }
+           
         }
         
         

@@ -7,7 +7,16 @@
 
 import UIKit
 
-struct Article:Identifiable {
+// カテゴリ
+// 0 main
+// 1 php
+// 2 js
+// 3 web
+// 4 WordPress
+// 5 swift
+// 6 aws
+
+struct Article:Identifiable,Codable,Equatable {
     var id:Int
     var title:String
     var descri:String

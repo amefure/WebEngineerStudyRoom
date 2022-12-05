@@ -8,6 +8,7 @@
 import UIKit
 
 class APIController: NSObject {
+    
 
     func validationUrl (urlString: String) -> Bool {
         if let nsurl = NSURL(string: urlString) {
@@ -38,10 +39,12 @@ class APIController: NSObject {
                       let ary = try JSONSerialization.jsonObject(with: data, options: []) as? Array<Any>
                       completion(ary ?? [])
                   } catch {
+                      completion([])
                     print(error.localizedDescription)
                   }
               } else {
                   // データが取得できなかった場合の処理
+                  completion([])
                   print(error?.localizedDescription ?? "不明なエラー")
               }
           }.resume()

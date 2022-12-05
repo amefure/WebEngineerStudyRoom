@@ -11,18 +11,28 @@ struct RowArticleView: View {
     
     let article:Article
     
+    let fileController = FileController()
+    
     let deviceWidth = UIScreen.main.bounds.width
+    
+    let imageName = ["main","php","js","web","wp","swift","aws"]
     
     var body: some View {
         Link(destination:URL(string: "https://tech.amefure.com/\(article.file)")!, label: {
             
             if deviceWidth < 450 {
                 ZStack(alignment: .center){
-                    AsyncImage(url: URL(string: "https://tech.amefure.com/\(article.imgPath)")) { image in
-                        image.resizable()
-                    } placeholder: {
-                        ProgressView()
-                    }.frame(width: deviceWidth - 70, height: 160)
+                    
+                    if fileController.getOnlineFlag() == 1{
+                        AsyncImage(url: URL(string: "https://tech.amefure.com/\(article.imgPath)")) { image in
+                            image.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }.frame(width: deviceWidth - 70, height: 160)
+                    }else{
+                        Image(imageName[article.category]).resizable().frame(width: deviceWidth - 70, height: 160)
+                    }
+
                     
                     Text(article.title)
                         .frame(width: deviceWidth - 70, height: 60)
@@ -33,11 +43,16 @@ struct RowArticleView: View {
                 }
             }else{
                 HStack(alignment: .center){
-                    AsyncImage(url: URL(string: "https://tech.amefure.com/\(article.imgPath)")) { image in
-                        image.resizable()
-                    } placeholder: {
-                        ProgressView()
-                    }.frame(width: 160, height: 100)
+                    
+                    if fileController.getOnlineFlag() == 1{
+                        AsyncImage(url: URL(string: "https://tech.amefure.com/\(article.imgPath)")) { image in
+                            image.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }.frame(width: 160, height: 100)
+                    }else{
+                        Image(imageName[article.category]).resizable().frame(width: deviceWidth - 70, height: 160)
+                    }
                     
                     VStack{
                         Text(article.title)
